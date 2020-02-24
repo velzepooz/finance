@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Charge Balance
+{% endblock %}
+
+{% block main %}
+    <h1 class="charge">Charge Balance</h1>
+    <form id="charge-form" action="/charge" method="post">
+        <div class="form-group">
+            <input id="charge-field" autocomplete="off" autofocus class="form-control" name="charge" placeholder="Amount" type="text" required/>
+        </div>
+        <p id="result"></p>
+        <button id="charge-button" class="btn btn-primary" type="submit">Charge</button>
+    </form>
+{% endblock %}

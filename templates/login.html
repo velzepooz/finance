@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <h1 class="login">Login</h1>
+    <form id="ragistrarion-form" action="/login" method="post" class="needs-validation" novalidate>
+        <div class="form-group">
+            <input id="login_login" autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text" required>
+            <p id="result"></p>
+            <div class="invalid-feedback">
+                Please enter a username.
+            </div>
+        </div>
+        <div class="form-group">
+            <input id="password_login" class="form-control" name="password" placeholder="Password" type="password" required>
+            <div class="invalid-feedback">
+                Please enter password.
+            </div>
+        </div>
+        <button id="process_input_login" class="btn btn-primary" type="submit">Log In</button>
+    </form>
+{% endblock %}

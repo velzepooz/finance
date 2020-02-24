@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell Stocks
+{% endblock %}
+
+{% block main %}
+    <h1 class="sell">Sell Stocks</h1>
+    <form action="/sell" method="post">
+        <div class="form-group">
+            <select class="form-control" name="symbol">
+                <option disabled selected value="">Symbol</option>
+                {% for dict in symbol_db %}
+                    <option value="{{ dict["stock"] }}">{{ dict["stock"] }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div id="sell-form" class="form-group">
+            <input id="sell-field" autocomplete="off" autofocus class="form-control" name="shares" placeholder="Shares" type="text" required/>
+        </div>
+        <p id="result"></p>
+        <button class="btn btn-primary" type="submit">Sell Stocks</button>
+    </form>
+{% endblock %}

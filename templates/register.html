@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Registration
+{% endblock %}
+
+{% block main %}
+    <h1 class="registrarion">Please, enter information<br> to Sign Up</h1>
+    <form id="ragistrarion-form" action="/register" method="post" class="needs-validation" novalidate>
+        <div class="form-group">
+                    <input id="login" autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text" required>
+            <p id="result"></p>
+            <div class="invalid-feedback">
+          Please choose a username.
+            </div>
+            </div>
+        <div class="form-group">
+            <input class="form-control" name="password" placeholder="Password" type="password" required>
+            <!--<p id=result></p>-->
+            <div class="invalid-feedback">
+                 Please choose a password.
+            </div>
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="confirmation" placeholder="Password confirmation" type="password" required>
+            <!--<p id=result></p>-->
+            <div class="invalid-feedback">
+                Please confirm password.
+            </div>
+        </div>
+        <button id="process_input" class="btn btn-primary" type="submit">Sign Up</button>
+    </form>
+{% endblock %}

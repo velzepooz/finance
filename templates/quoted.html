@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Information
+{% endblock %}
+
+{% block main %}
+    <h1 class="quoted">Info</h1>
+  <table class="table">
+  <thead>
+    <tr>
+    {% for key, value in quote.items() %}
+      <th scope="col">{{key.title()}}</th>
+    {% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+
+      <td>{{quote["name"] }}</td>
+      <td>{{quote["price"] | usd}}</td>
+      <td>{{quote["symbol"] }}</td>
+
+    </tr>
+    </tbody>
+</table>
+{% endblock %}

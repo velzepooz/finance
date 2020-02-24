@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy Stocks
+{% endblock %}
+
+{% block main %}
+    <h1 class="buy">Buy Stocks</h1>
+    <form id="buy-form" action="/buy" method="post" class="needs-validation" novalidate>
+        <div class="form-group">
+            <input id="buy_symbol" autocomplete="off" autofocus class="form-control" name="symbol" placeholder="Name of stocks" type="text" required>
+            <p id="result"></p>
+            <div class="invalid-feedback">
+                Please enter a symbol.
+            </div>
+        </div>
+        <div class="form-group">
+            <input id="buy_shares" autocomplete="off" autofocus class="form-control" name="shares" placeholder="Amount" type="text" required>
+            <p id="result_shares"></p>
+            <div class="invalid-feedback">
+                Please enter amount of shares.
+            </div>
+        </div>
+        <button id="buy-button" class="btn btn-primary" type="submit">Buy Stocks</button>
+    </form>
+{% endblock %}
