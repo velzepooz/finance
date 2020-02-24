@@ -5,4 +5,4 @@ This website allows users to sign up, register, and log in
 in order to buy and sell stocks and shares that they're interested in.
 
 Application is created with Python 3.7 and the Flask framework.
-HTML, CSS, Jinja and Javascript also used.
+HTML, CSS, Jinja and Javascript are also used.
