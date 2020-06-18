@@ -9,6 +9,7 @@ in order to buy and sell stocks and shares that they're interested in.
 * Flask
 * HTML
 * CSS
+* Bootstrap
 * Jinja
 * Javascript
 
